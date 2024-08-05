@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destalhe do produto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../javascript.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <button id="button"><img src="../imgs/test.png" alt="" width="30px" onclick="barra_lateral()"
+                id="btn-lateral"></button>
+        <h1>Ajuda</h1>
+        <form action="" id="form-buscar">
+            <input type="search" name="buscar" id="buscar" placeholder="buscar..."></input>
+            <button type="submit" id="btn-buscar"><img src="../imgs/buscar.png" alt="" width="30px"></button>
+        </form>
+        <a href="../views/Cad.html" class="icon-link"><img src="../imgs/cadastro.png.png" alt="" width="40px">
+            Cadastre-se</a>
+        <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px">
+            Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt=""
+                width="40px"> Favoritos</a>
+        <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+
+
+    </header>
+    <nav class="versao-mobile" id="versao-mobile">
+        <a href="../views/Cad.html" class=""><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
+        <a href="../views/duvida.html" class=""> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class=""> <img src="../imgs/wishlist.png" alt=""
+                width="40px">Favoritos</a>
+        <a href="../views/Perfil.html" class=""> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+        <a href="../views/catálogo.html"><img src="../imgs/catalogue.png" alt="" width="40px"> Catálogo</a>
+        <a href="../views/sobre a loja.html"><img src="../imgs/info.png" alt="" width="40px">Sobre a Loja</a>
+    </nav>
+    <nav>
+        <a href="../views/catálogo.html">Catálogo</a>
+        <a href="../views/sobre a loja.html">Sobre a Loja</a>
+    </nav>
+    <main class="grid_detalhe">
+        <aside class="lateral_catalago">
+
+            <p>Categorias</p>
+
+
+            <form action="">
+                <div class="lateral_input">
+                    <input type="radio" name="blusa" id="blusas">
+                    <label for="text">Blusas</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="saia" id="saia">
+                    <label for="text">Saias</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="roupa_intima" id="roupa_intima">
+                    <label for="text">Roupas Íntimas</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="vestido" id="vestidos">
+                    <label for="text">Vestidos</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="maquiagem" id="maquiagem">
+                    <label for="text">Maquiagem</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="bolsa" id="bolsa">
+                    <label for="text">Bolsa</label>
+                </div>
+            
+            <input type="submit" value="Buscar" class="buscar_por_categorias">
+            </form>
+
+        </aside>
+        <div class="coluna_imgs">
+            <img src="../imgs/roupa.jpg" alt="" width="120px">
+            <img src="../imgs/roupa.jpg" alt="" width="120px">
+            <img src="../imgs/roupa.jpg" alt="" width="120px">
+            <img src="../imgs/roupa.jpg" alt="" width="120px">
+        </div>
+        <div class="img_maior">
+            <img src="../imgs/mulher.roup.jpg" alt="" width="400px">
+        </div>
+        <div class="descricao">
+            <p><strong>Blusa Cropped Feminina Manga</strong> </p>
+            <p><strong>   R$ 95,00 </strong>
+             
+            </p>
+            <p>
+                Cor: Rosa
+            </p>
+          
+              <p>Escolha sua variação
+                <button>p</button>
+                <button>m</button>
+                <button>g</button>
+                <button>gg</button>
+            </p>
+        
+            <p><strong>Sobre o Produto</strong></p>
+            <p>Blusa Cropped Feminina Manga 3/4 Bufante LusaFashion, confeccionada em tecido plano viscose. Possui
+                decote reto, manga 3/4 bufante, acabamento e costura no tom.</p>
+            <p>
+                Informações Adicionais:
+                Tamanho: 36 ao 44
+                Cor: Rosa
+                Material: viscose(tecido plano)
+                Composição: 100% viscose
+                Marca: LudoFashion
+            </p>
+
+        </div>
+
+
+
+    </main>
+</body>
+</html>

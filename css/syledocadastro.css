@@ -1,0 +1,65 @@
+
+   /*cadastro*/
+
+   #cadastro{
+   
+    margin-left:30%;
+    margin-top: 10px;
+   
+ 
+  }
+  .cadastrar{
+    position:absolute;
+    background-color: var(--cor-primaria);
+    margin-top:40px ;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    padding-right:30%;
+    padding-bottom: 40%;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-right: 10px;
+    margin-left: 30%;
+    border-radius: 10px;
+    align-items: flex-start;
+    font-size: 25px;
+  
+   
+  }
+  .form-cad{
+   height: 100%;
+   font-size: 40px;
+   height: 40px;
+   display: block;
+   padding-left: 10px;
+   align-content: center;
+   align-items: center;
+   display: inline;
+  }
+  h3, button{
+    font-size: 25px;
+    color:var(--BRANCO);
+    background-color: var(--preto);
+    border:none;
+    align-items:start;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 40%;
+    padding-right: 15px;
+   
+  }
+  #bot-cad{
+    cursor: pointer;
+    text-decoration:underline;
+    margin: 10px;
+    padding-left:25px;
+    
+  }
+  .fim-cad{
+ 
+ 
+  margin-top: 20px;
+  margin-left: 90px;
+  }

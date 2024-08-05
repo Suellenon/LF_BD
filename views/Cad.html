@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../javascript.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <button id="button"><img src="../imgs/test.png" alt="" width="30px" onclick="barra_lateral()" id="btn-lateral"></button>
+        <h1>LudoFashion</h1>
+        <form action="" id="form-buscar">
+            <input type="search" name="buscar" id="buscar" placeholder="buscar..."></input>
+            <button type="submit" id="btn-buscar"><img src="../imgs/buscar.png" alt="" width="30px"></button>
+        </form>
+        <a href="../views/Cad.html" class="icon-link"><img src="../imgs/cadastro.png.png" alt="" width="40px">Cadastre-se</a>
+        <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt=""width="40px">Favoritos</a>
+        <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+
+
+    </header>
+    <nav class="versao-mobile" id="versao-mobile">
+        <a href="../views/Cad.html" class=""><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
+        <a href="../views/duvida.html" class=""> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class=""> <img src="../imgs/wishlist.png" alt=""width="40px">Favoritos</a>
+        <a href="../views/Perfil.html" class=""> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+        <a href="../views/catálogo.html"><img src="../imgs/catalogue.png" alt="" width="40px"> Catálogo</a>
+        <a href="../views/sobre a loja.html"><img src="../imgs/info.png" alt="" width="40px">Sobre a Loja</a>
+    </nav>
+
+
+    <nav>
+        <a href="../views/catálogo.html">Catálogo</a>
+        <a href="../views/sobre a loja.html ">Sobre a Loja</a>
+    </nav>
+
+    <section>
+        <div class="cadastro">
+            <h2>
+                Cadastrar
+            </h2>
+            <form class="dados" action="">
+
+                <div class="dados-cadastro">
+                    <label for="text">Nome:</label>
+                    <input type="text" name="text" id="text" required placeholder="Seu Nome">
+                </div>
+                <div class="dados-cadastro">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" required placeholder="Sua Senha">
+                </div>
+                <div class="dados-cadastro">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                </div>
+                <div class="dados-cadastro">
+                    <label for="number">Número de Telefone:</label>
+                    <input type="number" name="number" id="number" required placeholder="Seu número de telefone">
+                </div>
+                <div class="dados-cadastro">
+                    <label for="CPF">CPF:</label>
+                    <input type="number" name="CPF" id="CPF" placeholder="Cpf" required>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="date">Data de Nascimento:</label>
+                    <input type="date" name="date" id="date" required placeholder="sua data de nascimento">
+                </div>
+                <input type="submit" value="Cadastrar" id="btn-cadastrar">
+            </form>
+            <div class="final">
+                <div class="fim-cad">
+                    <a href="../views/login.html">Já tem uma conta cadastrada?</a>
+                    <p>
+                        OU
+                    </p>
+                </div>
+                <div class="icones-cadastro">
+                    <img src="../imgs/google.png" alt="" width="30px">
+                    <img src="../imgs/instagram.png" alt="" width="30px">
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>

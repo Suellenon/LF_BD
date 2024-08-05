@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <!--menu de navegação-->
+        <a href="index.html"><span class="material-symbols-outlined">add_circle</span></a>
+        <a href=""> Sobre</a>
+        <a href="aula_form.html">FORMS</a>
+        <section>
+
+            <form action="" enctype="multipart/form-data">
+                <label for="">Nome</label>
+                <input type="text" name="nome" id="nome" value="fulano">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+
+                <label for="num">Numero</label>
+                <input type="number" name="numero" id="num">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+
+                <label for="busca">Busca</label>
+                <input type="search" name="busca" id="busca">
+
+                <fieldset>
+                    <legend>Qual sua linguagem favorita?</legend>
+
+                    <input type="radio" name="lang" id="html" value="html">
+                    <label for="html">HTML</label>
+                    <input type="radio" name="lang" id="css" value="css">
+                    <label for="css">CSS</label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como voce chega no Senac</legend>
+                    <input type="checkbox" name="transporte[]" id="pe" value="pe">
+                    <label for="pe">A Pé</label>
+                    <input type="checkbox" name="transporte[]" id="onibus" value="onibus">
+                    <label for="onibus">Onibus</label>
+                </fieldset>
+
+                <label for="cor">Cor</label>
+                <input type="color" name="cor" id="cor">
+
+                <label for="data">data</label>
+                <input type="date" name="data" id="data">
+
+                <label for="foto">Foto de Perfil</label>
+                <input type="file" name="foto" id="foto" accept="image/*">
+
+                <input type="hidden" name="id" value="200">
+
+                <label for="tam">Selecione o tamanho da roupa</label>
+                <select name="tamanho-roupa" id="tam">
+                    <option value="p">p</option>
+                    <option value="m">m</option>
+                    <option value="g" selected>g</option>
+                </select>
+
+                <textarea name="descrição" id="descrição" cols="10" rows="10"></textarea>
+
+
+
+
+                <input type="submit" value="Enviar">
+
+            </form>
+        </section>
+
+    </body>
+
+
+</body>
+
+</html>

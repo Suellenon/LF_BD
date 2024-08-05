@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Cadastrado</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../javascript.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <button id="button"><img src="../imgs/test.png" alt="" width="30px" onclick="barra_lateral()"
+                id="btn-lateral"></button>
+        <h1>LudoFashion</h1>
+        <form action="" id="form-buscar">
+            <input type="search" name="buscar" id="buscar" placeholder="buscar..."></input>
+            <button type="submit" id="btn-buscar"><img src="../imgs/buscar.png" alt="" width="30px"></button>
+        </form>
+        <a href="../views/Cad.html" class="icon-link"><img src="../imgs/icon.png.png" alt=""
+                width="40px">Cadastre-se</a>
+        <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png" alt="" width="40px"> Dúvidas</a>
+
+    </header>
+    <nav class="versao-mobile" id="versao-mobile">
+        <a href="../views/Cad.html" class=""><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
+        <a href="../views/duvida.html" class=""> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class=""> <img src="../imgs/wishlist.png" alt=""
+                width="40px">Favoritos</a>
+        <a href="../views/Perfil.html" class=""> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+        <a href="../views/catálogo.html"><img src="../imgs/catalogue.png" alt="" width="40px"> Catálogo</a>
+        <a href="../views/sobre a loja.html"><img src="../imgs/info.png" alt="" width="40px">Sobre a Loja</a>
+    </nav>
+    <nav>
+        <a href="../views/catálogo.html">Catálogo</a>
+        <a href="../views/sobre a loja.html">Sobre a Loja</a>
+    </nav>
+
+    <section class="cadastro-produto">
+        <div class="produtos-cadastrados">
+            <p><strong>Produtos Cadastrados</strong></p>
+
+            <input type="button" value="Inserir Produto">
+        </div>
+   
+        <div class="mobile_container">
+    
+            <div class="mobile_prod" >
+                <img src="../imgs/roupa.jpg" alt="" width="80px">
+                  
+                   <p>Calca skinny</p>
+                   <p>azul</p>
+                   <p> 38, 40, 42</p>
+                   <p> Calca skinny feminina azul c&a</p>
+            </div>
+            <div class="mobile_prod" >
+                <img src="../imgs/roupa.jpg" alt="" width="80px">
+                  
+                   <p> Blusa manga bu</p>
+                   <p> fúcs..</p>
+                   <p>   tam.unic.</p>
+                   <p>
+                    Calca pantalona vermelho zara</p>
+            </div>
+            <div class="mobile_prod" >
+                <img src="../imgs/roupa.jpg" alt="" width="80px">
+                  
+                   <p>Calca skinny</p>
+                   <p>azul</p>
+                   <p> 38, 40, 42</p>
+                   <p>Calca pantalona vermelho zara</p>
+            </div>
+            <div class="mobile_prod" >
+                <img src="../imgs/roupa.jpg" alt="" width="80px">
+                  
+                   <p>  Camiseta adidas</p>
+                   <p>rosa</p>
+                   <p>  P, M, G    </p>
+                   <p> Camiseta rosa esportiva adidas</p>
+                   
+            </div>
+        </div>
+
+        <div class="prod-cadastrado">
+            <table class="tabela_prod">
+                <tr>
+                    <td>
+                        cod. produto
+                    </td>
+                    <td>
+                        nome do Produto
+                    </td>
+                    <td>
+                        Cor
+                    </td>
+                    <td>
+                        Tamanho
+                    </td>
+                    <td>Descrição do produto</td>
+                </tr>
+                <td>
+                    01
+
+                </td>
+                <td>
+                    Calca skinny
+                </td>
+                <td>
+                    azul
+                </td>
+                <td>
+                    38, 40, 42
+                </td>
+                <td>
+                    Calca skinny feminina azul c&a
+                </td>
+                <tr>
+                    <td>02</td>
+                    <td>
+                       .. Blusa manga bu
+                    </td>
+                    <td>
+                        fúcs..
+                    </td>
+                    <td>
+                        tam.unic.
+                    </td>
+                    <td>
+                        Calca pantalona vermelho zara
+                    </td>
+                <tr>
+                    <tr>
+                        <td>
+                            03
+                        </td>
+                        <td>
+                            Calca pantalona
+                        </td>
+                        <td>
+                            verm.
+                        </td>
+                        <td>
+                            tam.unic.
+                        </td>
+                        <td>
+                            Calca pantalona vermelho zara
+                        </td>
+                    </tr>
+                    <td>
+                        04
+                    </td>
+                    <td>
+                        Camiseta adidas
+                    </td>
+                    <td>
+                        Rosa
+                    </td>
+                    <td>
+                        P, M, G
+                    </td>
+                    <td>
+                        Camiseta rosa esportiva adidas
+                    </td>
+                </tr>
+                </tr>
+
+
+            </table>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destalhes do produto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../javascript.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <button id="button"><img src="../imgs/test.png" alt="" width="30px" onclick="barra_lateral()"
+                id="btn-lateral"></button>
+        <h1>Ajuda</h1>
+        <form action="" id="form-buscar">
+            <input type="search" name="buscar" id="buscar" placeholder="buscar..."></input>
+            <button type="submit" id="btn-buscar"><img src="../imgs/buscar.png" alt="" width="30px"></button>
+        </form>
+        <a href="../views/Cad.html" class="icon-link"><img src="../imgs/cadastro.png.png" alt="" width="40px">
+            Cadastre-se</a>
+        <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px">
+            Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt=""
+                width="40px"> Favoritos</a>
+        <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+
+
+    </header>
+    <nav class="versao-mobile" id="versao-mobile">
+        <a href="../views/Cad.html" class=""><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
+        <a href="../views/duvida.html" class=""> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class=""> <img src="../imgs/wishlist.png" alt=""
+                width="40px">Favoritos</a>
+        <a href="../views/Perfil.html" class=""> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
+        <a href="../views/catálogo.html"><img src="../imgs/catalogue.png" alt="" width="40px"> Catálogo</a>
+        <a href="../views/sobre a loja.html"><img src="../imgs/info.png" alt="" width="40px">Sobre a Loja</a>
+    </nav>
+    <nav>
+        <a href="../views/catálogo.html">Catálogo</a>
+        <a href="../views/sobre a loja.html">Sobre a Loja</a>
+    </nav>
+    <main class="grid_detalhe">
+        <aside class="lateral_catalago">
+
+            <p>Categorias</p>
+
+
+            <form action="">
+                <div class="lateral_input">
+                    <input type="radio" name="blusa" id="blusas">
+                    <label for="text">Blusas</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="saia" id="saia">
+                    <label for="text">Saias</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="roupa_intima" id="roupa_intima">
+                    <label for="text">Roupas Íntimas</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="vestido" id="vestidos">
+                    <label for="text">Vestidos</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="maquiagem" id="maquiagem">
+                    <label for="text">Maquiagem</label>
+                </div>
+                <div class="lateral_input">
+                    <input type="radio" name="bolsa" id="bolsa">
+                    <label for="text">Bolsa</label>
+                </div>
+
+                <input type="submit" value="Buscar" class="buscar_por_categorias">
+            </form>
+
+        </aside>
+        <div class="imgs_detalhes"><img src="../imgs/mulher3.jpg" alt="" width="400px">
+            <p>
+                Blusa Cropped Feminina Manga
+            </p>
+        </div>
+        <div class="imgs_detalhes"><img src="../imgs/mulher.jpg" alt="" width="400px">
+            <p>
+                Blusa Feminina Manga Curta Lastex Marisa
+            </p>
+        </div>
+        <div class="imgs_detalhes"><img src="../imgs/mulher.roup.jpg" alt="" width="400px">
+            <p>Blusa Feminina Fitness Animal</p>
+        </div>
+    </main>
+</body>
+
+</html>
