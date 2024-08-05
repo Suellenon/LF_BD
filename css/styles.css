@@ -493,9 +493,8 @@ header h1 {
     background-color: var(--cor-primaria);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   
     color: var(--BRANCO);
-    font-size: 40px;
+    font-size: 30px;
     width: 85%;
     border-radius: 70px;
     margin-left: 120px;
@@ -505,24 +504,29 @@ header h1 {
 }
 
 .categorias-2 {
-
-    
-    
     margin: 20px;
-
-
 }
+.categorias-2 button{
+  
+   
+    border-radius: 30px;
+    width: 100px;
+    cursor:pointer;
+    display: flex;
+   justify-content: center;
 
-.adicionar  {
+    
+}
+.adicionar a {
     grid-column: 2;
     display: flex;
     align-items: center;
-
+    text-decoration: none;
     justify-content: center;
-   
+    color: var(--BRANCO);
     margin: 20px;
     text-align: center;
-
+    font-size: 30px;
     border-radius: 100px;
     cursor: pointer;
 }

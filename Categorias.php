@@ -47,11 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
             <input type="search" name="buscar" id="buscar" placeholder="buscar..."></input>
             <button type="submit" id="btn-buscar"><img src="../imgs/buscar.png" alt="" width="30px"></button>
         </form>
-        <a href="../views/Cad.html" class="icon-link"><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastre-se</a>
-        <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
-        <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt="" width="40px"> Favoritos</a>
-        <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
-       
+        <a href="../views/Cad.html" class="icon-link"><img src="./imgs/cadastro.png.png" alt="" width="40px"> Cadastre-se</a>
+        <a href="../views/duvida.html" class="icon-link"> <img src="./imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
+        <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="./imgs/wishlist.png" alt="" width="40px"> Favoritos</a>
+        <a href="../views/Perfil.html" class="icon-link"> <img src="./imgs/perfil.png" alt="" width="40px"> Perfil</a>
+
 
     </header>
     <nav class="versao-mobile" id="versao-mobile">
@@ -68,45 +68,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
 
 
     </nav>
-   
+
     <section>
         <h1 id="categorias-tit1"> <img src="../imgs/categoria.png" alt="" width="40px">Categorias</h1>
-        <span>
-              <div class="Categorias">   
-            
+
+        <form action="" method="post">
             <div class="Categorias">
-                 <?php foreach ($categoria as $categoria): ?> 
-            <span class="categorias-2">
-                <a><?= htmlspecialchars($categoria['nome']) ?></a>
-                 <button type="submit">editar</button>
-
-            <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
-                <span>
-                    <input type="hidden" name="id" value="<?=$categoria['id_categoria']?>">
-                    <button type="submit">excluir</button>
-
-                 </span>
-                
-              </form>
-            </span>
-      
-            
-
-                    
-
-                            
-                            
-            <?php endforeach; ?>
-                  
-            
-            <span class="adicionar">
-                <a href="adicionar.php">Adicionar Categoria</a>
-            </span>
-          
-        </span>        
-       
-    
-    </div>
- </div>
+                <?php foreach ($categoria as $categoria) : ?>
+                    <span class="categorias-2">
+                        <a><?= htmlspecialchars($categoria['nome']) ?></a>
+                        <button type="submit">editar</button>
+                        <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
+                            <input type="hidden" name="id" value="<?= $categoria['id_categoria'] ?>">
+                            <button type="submit">excluir</button>
+                        </form>
+                    </span>
+                <?php endforeach; ?>
+                <span class="adicionar">
+                    <a href="adicionar.php">Adicionar Categoria</a>
+                </span>
+            </div>
+        
     </section>
 </body>

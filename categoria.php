@@ -36,30 +36,31 @@ class Categoria
     }
 
     // Método para atualizar um carro
-    public function atualizar($nome)
+    public function atualizar($id,$nome)
     {
         $sql = "UPDATE categoria SET nome  WHERE id = :id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':nome', $marca);
+        $stmt->bindParam(':nome', $nome);
        
         $stmt->execute();
     }
+    
 
-    // Método para deletar carros
-    // public function deletar($ids)
-    // {
-    //     $ids = implode(',', array_map('intval', $ids));
-    //     $sql = "DELETE FROM categoria WHERE id IN ($ids)";
-    //     $this->conexao->exec($sql);
-    // }
-    public function deletar(){
-        
-        $sql = "DELETE FROM categoria WHERE id = :id";
-        $stmt = $this->conexao->prepare($sql);
-        $stmt->bindParam(':id',$this->obterporId());
-        $stmt->execute();
-
+    
+     public function deletar($ids)
+     {
+        $ids = implode(',', array_map('intval', $ids));
+        $sql = "DELETE FROM categoria WHERE id IN ($ids)";
+         $this->conexao->exec($sql);
     }
+    //  public function deletar(){
+        
+    //     $sql = "DELETE FROM categoria WHERE id = :id";
+    //     $stmt = $this->conexao->prepare($sql);
+    //     $stmt->bindParam(':id',$this->obterporId($id));
+    //     $stmt->execute();
+
+    // }
 }
 ?>
