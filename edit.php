@@ -24,27 +24,28 @@ if (!$id) {
 
 // Obtém os dados do carro para o formulário
 $dadoscategoria = $categoria->obterPorId($id);
-if (!$dadosCategoria) {
+if (!$dadoscategoria) {
     header('Location: categorias.php');
     exit();
 }
 
 // Verifica se a requisição é do tipo POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = $_POST['nome'];
-   
-   
+    $nome = $_POST['categoria'];
 
-        
-    
+
+
+
+
 
     // Atualiza os dados do carro no banco de dados
-    $categoria->atualizar($nome);
+    $categoria->atualizar($id,$nome);
 
     // Redireciona para a página inicial
     header('Location: categorias.php');
     exit(); // Certifique-se de que o script é encerrado após o redirecionamento
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -70,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
         <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt="" width="40px"> Favoritos</a>
         <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
-       
+
 
     </header>
     <nav class="versao-mobile" id="versao-mobile">
@@ -87,17 +88,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     </nav>
-   
+
     <section>
         <h1 id="categorias-tit1"> <img src="../imgs/categoria.png" alt="" width="40px">Categorias</h1>
         <div class="Categorias">
             <span class="categorias-2">
-                 <form action="edit.php?id=<?= $id ?>"method="post">
-                 <label for="categoria">categoria:</label>
-                        <input type="categoria" name="categoria" id="categoria" value="<?= htmlspecialchars($dadoscategoria['nome']) ?>" required>
-                    </div>
-                    <button type="submit" >Atualizar Categoria</button>
-
-
-                
-                
+                <form action="edit.php?id=<?= $id?>" method="post">
+                    <input type="number" name="id" value="<?=htmlspecialchars($dadoscategoria['id_categoria'])?>">
+                    <label for="categoria">categoria:</label>
+                    <input type="categoria" name="categoria" id="categoria" value="<?= htmlspecialchars($dadoscategoria['nome']) ?>" required>
+      
+                  <button type="submit">Atualizar categoria</button>
+        </form>
+      </div>

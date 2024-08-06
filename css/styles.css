@@ -506,11 +506,12 @@ header h1 {
 .categorias-2 {
     margin: 20px;
 }
-.categorias-2 button{
+.categorias-2 a{
   
    
     border-radius: 30px;
     width: 100px;
+    text-decoration: none;
     cursor:pointer;
     display: flex;
    justify-content: center;
@@ -518,15 +519,16 @@ header h1 {
     
 }
 .adicionar a {
-    grid-column: 2;
+   
     display: flex;
-    align-items: center;
-    text-decoration: none;
+   
+   
     justify-content: center;
     color: var(--BRANCO);
     margin: 20px;
     text-align: center;
     font-size: 30px;
+    border: solid var(--cor-secundaria);
     border-radius: 100px;
     cursor: pointer;
 }

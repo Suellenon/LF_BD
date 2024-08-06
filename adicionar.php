@@ -16,14 +16,13 @@ $categoria = new Categoria($conexao);
 
 // Verifica se a requisição é do tipo POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $nome = $_POST['nome'];
-        // Adiciona o carro no banco de dados
-        $categoria->adicionar($nome);
+    $nome = $_POST['nome'];
+    // Adiciona o carro no banco de dados
+    $categoria->adicionar($nome);
 
-     header('Location: categorias.php');
-     exit(); 
-
-    } 
+    header('Location: categorias.php');
+    exit();
+}
 
 
 
@@ -53,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="../views/duvida.html" class="icon-link"> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
         <a href="../views/Minha lista de desejo.html" class="icon-link"> <img src="../imgs/wishlist.png" alt="" width="40px"> Favoritos</a>
         <a href="../views/Perfil.html" class="icon-link"> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
-       
+
 
     </header>
     <nav class="versao-mobile" id="versao-mobile">
@@ -70,18 +69,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     </nav>
-   
+
     <section>
         <h1 id="categorias-tit1"> <img src="../imgs/categoria.png" alt="" width="40px">Categorias</h1>
         <div class="Categorias">
             <span class="categorias-2">
-                
-            <form action="adicionar.php" method="post">
+
+                <form action="adicionar.php" method="post">
                     <div>
                         <label for="nome"> Categoria:</label>
-                        <input type="nome" name="nome" id="nome"required>
+                        <input type="nome" name="nome" id="nome" required>
                     </div>
-                    <button type="submit">Adicionar Categoria</button>
+                    <button type="submit">Adicionar categoria</button>
+                </form>
             </span>
         </div>
     </section>

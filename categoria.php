@@ -28,7 +28,7 @@ class Categoria
     // Método para obter um carro por ID
     public function obterPorId($id)
     {
-        $sql = "SELECT * FROM categoria WHERE id = :id";
+        $sql = "SELECT * FROM categoria WHERE id_categoria = :id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -36,31 +36,32 @@ class Categoria
     }
 
     // Método para atualizar um carro
-    public function atualizar($id,$nome)
+    public function atualizar($id, $nome)
     {
-        $sql = "UPDATE categoria SET nome  WHERE id = :id";
+        $sql = "UPDATE categoria SET nome= :nome  WHERE id_categoria = :id";
         $stmt = $this->conexao->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id);
         $stmt->bindParam(':nome', $nome);
-       
         $stmt->execute();
     }
-    
 
-    
-     public function deletar($ids)
-     {
-        $ids = implode(',', array_map('intval', $ids));
-        $sql = "DELETE FROM categoria WHERE id IN ($ids)";
-         $this->conexao->exec($sql);
-    }
-    //  public function deletar(){
+
+
+    //   public function deletar($id)
+    // {
+    //     $id = implode(',', array_map('intval', $id));
+    //     $sql = "DELETE FROM categoria WHERE id_categoria IN ($id)";
+    //     $this->conexao->exec($sql);
+    //  }
+    public function deletar($id)
+    {
+
+        $sql = "DELETE FROM categoria WHERE id_categoria = :id";
+
+        $stmt = $this->conexao->prepare($sql);
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
         
-    //     $sql = "DELETE FROM categoria WHERE id = :id";
-    //     $stmt = $this->conexao->prepare($sql);
-    //     $stmt->bindParam(':id',$this->obterporId($id));
-    //     $stmt->execute();
-
-    // }
+    }
 }
-?>
