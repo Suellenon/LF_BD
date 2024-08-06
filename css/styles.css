@@ -506,31 +506,52 @@ header h1 {
 .categorias-2 {
     margin: 20px;
 }
-.categorias-2 a{
-  
-   
-    border-radius: 30px;
-    width: 100px;
+.editar{
+    
+    width: 80px;
+    font-size: 25px;
+    border:1px solid black;
     text-decoration: none;
+    background-color: blue;
+    color: var(--BRANCO);
     cursor:pointer;
     display: flex;
-   justify-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
 
     
 }
+#deletar{
+    font-size: 25px;
+    background-color: red;
+    cursor: pointer;
+    color: var(--BRANCO);
+}
+.add{
+    color: var(--BRANCO);
+    background-color:#ec8080;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.atualizar{
+    background-color: blue;
+    font-size: 25px;
+    color: var(--BRANCO);
+}
+
 .adicionar a {
    
     display: flex;
-   
-   
     justify-content: center;
     color: var(--BRANCO);
     margin: 20px;
     text-align: center;
     font-size: 30px;
-    border: solid var(--cor-secundaria);
-    border-radius: 100px;
+border: 1px solid ;
+   width: 120px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 

@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="nome"> Categoria:</label>
                         <input type="nome" name="nome" id="nome" required>
                     </div>
-                    <button type="submit">Adicionar categoria</button>
+                    <button class="add" type="submit">Adicionar categoria</button>
                 </form>
             </span>
         </div>

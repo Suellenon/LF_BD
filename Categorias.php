@@ -18,11 +18,11 @@ $categoria = $categoria->listar();
 // Verifica se a requisição é do tipo POST (para deletar carros)
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
     // Obtém os IDs dos carros a serem deletados
-    $idParaDeletar = $_POST['id'];
+    $idParaDeletar = $_GET['id'];
     // Deleta os carros selecionados
     $categoria->deletar($idParaDeletar);
     // Redireciona para a página inicial
-    header('Location: categorias.php');
+    header('Location: Categorias.php');
     exit(); // Certifique-se de que o script é encerrado após o redirecionamento
 }
 ?>
@@ -73,25 +73,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
         <h1 id="categorias-tit1"> <img src="../imgs/categoria.png" alt="" width="40px">Categorias</h1>
 
         <form action="Categorias.php" method="post">
-            
+
             <div class="Categorias">
                 <?php foreach ($categoria as $categoria) : ?>
                     <span class="categorias-2">
                         <a><?= htmlspecialchars($categoria['nome']) ?></a>
-                        <a href="edit.php?id=<?=$categoria['id_categoria']?>">Editar</a>
+                        <a class="editar" href="edit.php?id=<?= $categoria['id_categoria'] ?>">editar</a>
                         <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
-                            <input type="number" name="id" value="<?= $categoria['id_categoria'] ?>">
-                            <button name="deletar">deletar</button> 
-                         
-
-
+                            <input type="hidden" name="id" value="<?= $categoria['id_categoria'] ?>">
+                            <button name="deletar" id="deletar">deletar</button>
                         </form>
                     </span>
                 <?php endforeach; ?>
                 <span class="adicionar">
                     <a href="adicionar.php">adicionar categoria</a>
+
                 </span>
             </div>
-        
+
     </section>
 </body>

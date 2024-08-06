@@ -3,6 +3,7 @@
 require 'conexao.php';
 require 'Categoria.php';
 
+
 // Habilita a exibição de erros para depuração
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -16,13 +17,13 @@ $categoria = new Categoria($conexao);
 
 // Obtém o ID do carro a ser deletado
 $id = $_GET['id'] ?? null;
-$categoria= new categoria($id);
+
 if ($id) {
     // Deleta o carro
     $categoria->deletar([$id]);
     
 
-}header('Location: categorias.php');
+}header('Location: Categorias.php');
 exit(); 
 
 

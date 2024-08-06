@@ -98,6 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="categoria">categoria:</label>
                     <input type="categoria" name="categoria" id="categoria" value="<?= htmlspecialchars($dadoscategoria['nome']) ?>" required>
       
-                  <button type="submit">Atualizar categoria</button>
+                  <button class="atualizar" type="submit">Atualizar categoria</button>
         </form>
       </div>
