@@ -508,7 +508,7 @@ header h1 {
 }
 .editar{
     
-    width: 80px;
+    width: 90px;
     font-size: 25px;
     border:1px solid black;
     text-decoration: none;
@@ -522,8 +522,10 @@ header h1 {
     
 }
 #deletar{
+   display: flex;
+   align-items: center;
     font-size: 25px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.726);
     cursor: pointer;
     color: var(--BRANCO);
 }
@@ -535,21 +537,22 @@ header h1 {
 
 }
 .atualizar{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.521);
     font-size: 25px;
     color: var(--BRANCO);
+    cursor: pointer;
 }
 
 .adicionar a {
    
     display: flex;
-    justify-content: center;
+    
     color: var(--BRANCO);
     margin: 20px;
-    text-align: center;
+
     font-size: 30px;
-border: 1px solid ;
-   width: 120px;
+    border: 1px solid ;
+    width: 120px;
     cursor: pointer;
     text-decoration: none;
 }

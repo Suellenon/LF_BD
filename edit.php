@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="Categorias">
             <span class="categorias-2">
                 <form action="edit.php?id=<?= $id?>" method="post">
-                    <input type="number" name="id" value="<?=htmlspecialchars($dadoscategoria['id_categoria'])?>">
+                    <input type="hidden" name="id" value="<?=htmlspecialchars($dadoscategoria['id_categoria'])?>">
                     <label for="categoria">categoria:</label>
                     <input type="categoria" name="categoria" id="categoria" value="<?= htmlspecialchars($dadoscategoria['nome']) ?>" required>
       

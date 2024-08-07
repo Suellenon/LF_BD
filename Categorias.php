@@ -1,6 +1,6 @@
 <?php
 
-// Inclui os arquivos de conexão e da classe Carro
+// Inclui os arquivos de conexão e
 require 'conexao.php';
 require 'categoria.php';
 
@@ -12,15 +12,17 @@ $categoria = new Categoria($conexao);
 
 
 
-// Obtém a lista de carros do banco de dados
+// Obtém a lista do banco de dados
 $categoria = $categoria->listar();
 
-// Verifica se a requisição é do tipo POST (para deletar carros)
+// Verifica se a requisição é do tipo POST (para deletar )
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
-    // Obtém os IDs dos carros a serem deletados
-    $idParaDeletar = $_GET['id'];
+    
+    $id = $_POST['id'];
     // Deleta os carros selecionados
-    $categoria->deletar($idParaDeletar);
+    echo var_dump($id);
+    echo gettype($id);
+    $categoria->deletar($id);
     // Redireciona para a página inicial
     header('Location: Categorias.php');
     exit(); // Certifique-se de que o script é encerrado após o redirecionamento
@@ -78,10 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
                 <?php foreach ($categoria as $categoria) : ?>
                     <span class="categorias-2">
                         <a><?= htmlspecialchars($categoria['nome']) ?></a>
-                        <a class="editar" href="edit.php?id=<?= $categoria['id_categoria'] ?>">editar</a>
+                        <a class="editar" href="edit.php?id=<?= $categoria['id_categoria'] ?>">editar <img src="./imgs/editar.png" alt="" width="25px"></a>
                         <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
                             <input type="hidden" name="id" value="<?= $categoria['id_categoria'] ?>">
-                            <button name="deletar" id="deletar">deletar</button>
+                            <button name="deletar" id="deletar">deletar <img src="./imgs/lixeira.png" alt="" width="25px"></button>
                         </form>
                     </span>
                 <?php endforeach; ?>

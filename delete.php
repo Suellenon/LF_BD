@@ -16,11 +16,15 @@ $conexao = (new Conexao())->conectar();
 $categoria = new Categoria($conexao);
 
 // Obtém o ID do carro a ser deletado
-$id = $_GET['id'] ?? null;
+$id = $_POST['id'] ?? null;
 
-if ($id) {
+if (is_numeric($id)) {
     // Deleta o carro
-    $categoria->deletar([$id]);
+    $categoria->deletar($id);
+    
+
+
+
     
 
 }header('Location: Categorias.php');
