@@ -507,37 +507,24 @@ header h1 {
     margin: 20px;
 }
 .editar{
-    
-    width: 90px;
-    font-size: 25px;
-    border:1px solid black;
-    text-decoration: none;
-    background-color: blue;
-    color: var(--BRANCO);
-    cursor:pointer;
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-
-    
+    cursor:pointer;
 }
 #deletar{
-   display: flex;
-   align-items: center;
+   background-color:rgb(149, 155, 160);
+    display: flex;
     font-size: 25px;
-    background-color: rgba(255, 0, 0, 0.726);
     cursor: pointer;
-    color: var(--BRANCO);
 }
 .add{
     color: var(--BRANCO);
-    background-color:#ec8080;
+    color: var(--BRANCO);
+   
     font-size: 25px;
     cursor: pointer;
 
 }
 .atualizar{
-    background-color: rgba(0, 0, 255, 0.521);
     font-size: 25px;
     color: var(--BRANCO);
     cursor: pointer;
@@ -546,10 +533,8 @@ header h1 {
 .adicionar a {
    
     display: flex;
-    
     color: var(--BRANCO);
     margin: 20px;
-
     font-size: 30px;
     border: 1px solid ;
     width: 120px;

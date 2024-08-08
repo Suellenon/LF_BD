@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
 
     </header>
     <nav class="versao-mobile" id="versao-mobile">
-        <a href="../views/Cad.html" class=""><img src="../imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
+        <a href="../views/Cad.html" class=""><img src="./imgs/cadastro.png.png" alt="" width="40px"> Cadastrar</a>
         <a href="../views/duvida.html" class=""> <img src="../imgs/ajuda.png.png" alt="" width="40px"> Dúvidas</a>
         <a href="../views/Minha lista de desejo.html" class=""> <img src="../imgs/wishlist.png" alt="" width="40px">Favoritos</a>
         <a href="../views/Perfil.html" class=""> <img src="../imgs/perfil.png" alt="" width="40px"> Perfil</a>
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
     </nav>
 
     <section>
-        <h1 id="categorias-tit1"> <img src="../imgs/categoria.png" alt="" width="40px">Categorias</h1>
+        <h1 id="categorias-tit1"> <img src="./imgs/categoria.png" alt="" width="40px">Categorias</h1>
 
         <form action="Categorias.php" method="post">
 
@@ -80,10 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
                 <?php foreach ($categoria as $categoria) : ?>
                     <span class="categorias-2">
                         <a><?= htmlspecialchars($categoria['nome']) ?></a>
-                        <a class="editar" href="edit.php?id=<?= $categoria['id_categoria'] ?>">editar <img src="./imgs/editar.png" alt="" width="25px"></a>
+                        <a href="edit.php?id=<?= $categoria['id_categoria'] ?>"><img src="./imgs/editar.png" alt="" width="25px" class="editar"></a>
                         <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
                             <input type="hidden" name="id" value="<?= $categoria['id_categoria'] ?>">
-                            <button name="deletar" id="deletar">deletar <img src="./imgs/lixeira.png" alt="" width="25px"></button>
+                            <button name="deletar" id="deletar"><img src="./imgs/lixeira.png" alt="" width="25px"></button>
                         </form>
                     </span>
                 <?php endforeach; ?>

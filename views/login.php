@@ -1,3 +1,26 @@
+
+<?php
+$localhost = "localhost";
+$username = "root";
+$password = "";
+$db_banco = "ludofashion";
+
+
+$connect = mysqli_connect("$localhost", "$username", "$password", "$db_banco");
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -49,14 +72,14 @@
                 Login
             </h1>
 
-            <form action="">
+            <form action="" method="post">
                 <div class="perg-login">
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="perg-login">
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" id="password" placeholder="Senha" required>
+                    <input type="password" name="senha" id="password" placeholder="Senha" required>
 
                 </div>
                 <button id="btn-login" type="submit">Login</button>
@@ -68,7 +91,7 @@
                 <img src="../imgs/instagram.png" alt="" height="35px">
             </div>
             <div class="links-login">
-                <a href="../views/Cadastro.html">Cadastrar</a>
+                <a href="./Cad.php">Cadastrar</a>
                 <a href="">Precisa de Ajuda?</a>
             </div>
 

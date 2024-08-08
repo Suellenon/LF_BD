@@ -1,4 +1,9 @@
 <?php
+/**
+ * Classe Conexao
+ *
+ * Esta classe é responsável por estabelecer a conexão com o banco de dados usando PDO.
+ */
 
 class Conexao {
     /**
@@ -9,7 +14,7 @@ class Conexao {
     /**
      * @var string $dbname Nome do banco de dados.
      */
-    private $dbname = 'ludofashion';
+    private $dbname = 'produto_bd';
 
     /**
      * @var string $usuario Nome do usuário para a conexão com o banco de dados.

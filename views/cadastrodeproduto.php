@@ -1,3 +1,21 @@
+<?php
+require 'conexao_produto.php';
+require 'produto.php';
+
+// Cria a conexão com o banco de dados
+$conexao = (new Conexao())->conectar();
+// Cria uma instância da classe Carro
+$produto = new produto($conexao);
+
+$produtos = $produto->listar();
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,25 +66,25 @@
             <p class="p_cad"> Detalhes do Produto</p>
 
             <div class="form-cad">
-                <form action="">
+                <form action="adicionar_produto.php" method="post"  enctype="multipart/form-data">
                     <div >
                         <label for="cod_prod">Cod.prod</label>
-                        <input type="number" id="cod_prod">
+                        <input type="number" name="cod_prod">
                         <label for="nome_prod">Nome do produto</label>
-                        <input type="text" id="nome_prod">
+                        <input type="text" name="nome_prod" required>
                         <label for="cor">Cor</label>
-                        <input type="text" id="cor">
+                        <input type="text" name="cor">
                         <label for="tamanho">Tamanho</label>
-                        <input type="text" id="tamanho">
+                        <input type="text" name="tamanho" required>
                         <label for="descricao">Descrição do produto</label>
-                        <input type="text" id="descricao">
+                        <input type="text" name="descricao" required>
                     </div>
 
                     <div class="cad" >
                         <label for="produto">Adicionar Produto</label>
-                        <input type="file" name="produto" id="produto">
-                        <label for="text">Características do produto</label>
-                        <textarea name="text" id="características"></textarea>
+                        <input type="file" name="foto" id="foto">
+                        <label for="caract">Características do produto</label>
+                        <textarea name="caract" id="características"></textarea>
                     </div>
 
                     <input type="submit" value="Confirmar" id="enviar_formcad">
