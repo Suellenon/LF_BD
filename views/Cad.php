@@ -40,26 +40,6 @@ if (isset($_POST['btn-cadastrar'])) {
    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>

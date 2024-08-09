@@ -22,7 +22,7 @@ if (!$id) {
     exit();
 }
 
-// Obtém os dados do carro para o formulário
+// Obtém os dados para o formulário
 $dadoscategoria = $categoria->obterPorId($id);
 if (!$dadoscategoria) {
     header('Location: categorias.php');
@@ -98,6 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="categoria">categoria:</label>
                     <input type="categoria" name="categoria" id="categoria" value="<?= htmlspecialchars($dadoscategoria['nome']) ?>" required>
       
-                  <button class="adicionar" type="submit">Atualizar categoria</button>
+                  <button type="submit" class="delete">Atualizar categoria</button>
         </form>
       </div>

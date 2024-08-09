@@ -17,7 +17,7 @@ $categoria = $categoria->listar();
 
 // Verifica se a requisição é do tipo POST (para deletar )
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
-    
+
     $id = $_POST['id'];
     // Deleta os carros selecionados
     echo var_dump($id);

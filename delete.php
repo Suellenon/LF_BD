@@ -12,14 +12,14 @@ error_reporting(E_ALL);
 // Cria a conexão com o banco de dados
 $conexao = (new Conexao())->conectar();
 
-// Cria uma instância da classe Carro
+// Cria uma instância 
 $categoria = new Categoria($conexao);
 
-// Obtém o ID do carro a ser deletado
+// Obtém o ID ser deletado
 $id = $_POST['id'] ?? null;
 
-if (is_numeric($id)) {
-    // Deleta o carro
+if (($id)) {
+    // Deleta 
     $categoria->deletar($id);
     
 

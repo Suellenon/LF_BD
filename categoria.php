@@ -60,23 +60,4 @@ class Categoria
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
 }
-
-
-    //    public function deletar($id)
-    //  {
-    //     if (is_array($id)) {
-    //         // Para múltiplos IDs
-    //         $ids = implode(',', array_map('intval', $id));
-    //         $sql = "DELETE FROM categoria WHERE id_categoria IN ($ids)";
-    //   } else {
-    //          // Para um único ID
-    //         $sql = "DELETE FROM categoria WHERE id_categoria = :id";
-    //     }
-
-    //     $stmt = $this->conexao->prepare($sql);
-    //      if (!is_array($id)) {
-    //        $stmt->bindParam(':id', $id, PDO::PARAM_INT);     }
-
-    //      $stmt->execute();
-    //  }
 }
