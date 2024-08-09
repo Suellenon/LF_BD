@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cor = $_POST['cor'];
     $tamanho = $_POST['tamanho'];
     $descricao = $_POST['descricao'];
-    $caracteristicas= $_POST['caract'];
+    $caracteristicas= $_POST['caracteristicas'];
 
     // Lida com o upload da foto
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $produto->adicionar($cod, $nome,$cor, $tamanho,$descricao, $fotoNome,$caracteristicas);
     } else {
         // Adiciona o carro sem foto no banco de dados
-        $produto->adicionar($cod, $nome,$cor, $tamanho,$descricao,null,$caracteristicas);
+        $produto->adicionar($cod, $nome,$cor, $tamanho,$descricao,$fotoNome,$caracteristicas);
     }
 
     // Redireciona para a página inicial

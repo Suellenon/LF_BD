@@ -1,22 +1,10 @@
 <?php
 require 'conexoes.php';
 $sql = "SELECT * FROM categoria";
-$stmt = $connect->prepare($sql);
+$stmt = $connect->prepare($sql);    //$stmt: É uma variável que representa um objeto de declaração preparada (statement) criado com o método prepare() da classe mysqli. Esse objeto é usado para executar consultas SQL de forma segura, prevenindo ataques como injeção de SQL.
 $stmt->execute();
 $result = $stmt->get_result();
-
-
-
-
 ?>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,10 +43,7 @@ $result = $stmt->get_result();
     <nav>
         <a href="../views/catálogo.html">Catálogo</a>
         <a href="../views/sobre a loja.html">Sobre a Loja</a>
-
-
     </nav>
-   
     <section>
         <h1 id="categorias-tit1"> <img src="./imgs/categoria.png" alt="" width="40px">Categorias</h1>
         <div class="Categorias">
@@ -77,18 +62,11 @@ $result = $stmt->get_result();
 
                     <input type="image" src="./imgs/lixeira.png" alt="" width="40px" value="deletar_categoria.php?id=<?php echo $row['id_categoria'];?>" name="excluir">
                 </form>
-              
             </span>
             <?php endwhile; ?>
-           
-        
-            
-      
-
             <span class="adicionar">
               <img src="./imgs/mais.png" alt="" width="50px"><a href="adicionar_categoria.php">Adicionar Categoria</a>
             </span>
-        
         </div>
     </section>
 </body>

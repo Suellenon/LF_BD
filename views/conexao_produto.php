@@ -14,7 +14,7 @@ class Conexao {
     /**
      * @var string $dbname Nome do banco de dados.
      */
-    private $dbname = 'produto_bd';
+    private $dbname = 'ludofashion';
 
     /**
      * @var string $usuario Nome do usuário para a conexão com o banco de dados.

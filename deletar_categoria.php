@@ -3,9 +3,9 @@ require 'conexoes.php';
 
 
 
-if (!isset($_GET['id'])) {
-    die("ID da categoria não fornecido.");
-}
+// if (!isset($_GET['id'])) {
+//     die("ID da categoria não fornecido.");
+// }
 
 $id = intval($_GET['id']); // Sanitiza o ID
 

@@ -84,24 +84,12 @@ $produtos = $produto->listar();
                         <label for="produto">Adicionar Produto</label>
                         <input type="file" name="foto" id="foto">
                         <label for="caract">Características do produto</label>
-                        <textarea name="caract" id="características"></textarea>
+                        <textarea name="caracteristicas" id="características"></textarea>
                     </div>
-
                     <input type="submit" value="Confirmar" id="enviar_formcad">
-
                 </form>
             </div>
-
-
-
         </section>
-
-
-
-
     </main>
-
-
 </body>
-
 </html>

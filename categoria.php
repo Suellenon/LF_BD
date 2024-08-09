@@ -44,9 +44,6 @@ class Categoria
         $stmt->bindParam(':nome', $nome);
         $stmt->execute();
     }
-
-
-
     // public function deletar($id)
     // {
     //     $id = intval($id);
