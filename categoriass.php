@@ -65,17 +65,17 @@ $result = $stmt->get_result();
         <?php while ($row = $result->fetch_assoc()): ?>
             <span class="categorias-2">
 
-                <form action=""method="post">
-                    <input type="number" name="id" value="<?php echo htmlspecialchars($row['id_categoria']); ?>">
+                <form action="editar.php"method="post">
+                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_categoria']); ?>">
                     <a><?php echo htmlspecialchars($row['nome']); ?></a>
                    
-                    <a href=""><img src="./imgs/editar.png" alt="" width="40px"></a>
+                    <a href="editar.php?id=<?=($row['id_categoria']);?>"><img src="./imgs/editar.png" alt="" width="40px"></a>
                 </form>
                 
                 <form action="deletar_categoria.php" method="post" onsubmit="return confirm('Deseja excluir essa categoria?')">
-                    <input type="value" name="id"  value="<?php echo htmlspecialchars($row['id_categoria']); ?>" >
+                    <input type="hidden" name="id"  value="<?php echo htmlspecialchars($row['id_categoria']);?>" >
 
-                    <input type="image" src="./imgs/lixeira.png" alt="" width="40px" value="deletar_categoria.php?id=<?php echo $row['id_categoria'];?>" name="excluir">
+                    <a href="deletar_categoria.php?id=<?=($row['id_categoria']);?>"><input type="image" src="./imgs/lixeira.png" alt="" width="40px" value="" name="excluir"></a>
                 </form>
               
             </span>

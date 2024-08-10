@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="hidden" name="id" value="">
                     <label for="">categoria</label>
                     <input type="text" name="categoria" id="">
-                    <button type="submit">Atualizar Categoria</button>
+                    <button type="submit">Adicionar categoria</button>
                 
                 </form>
             </span>

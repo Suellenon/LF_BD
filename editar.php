@@ -8,7 +8,7 @@ if (!isset($_GET['id'])) {
 $id = intval($_GET['id']);
 
 // Obtém os detalhes da categoria
-$sql = "SELECT * FROM categoria WHERE id = ?";
+$sql = "SELECT * FROM categoria WHERE id_categoria = ?";
 $stmt = $connect->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -20,17 +20,18 @@ if (!$categoria) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['nome'];
+    $nome = $_POST['nome'];
 
     // Atualiza a categoria no banco de dados
-    $sql = "UPDATE categoria SET nome = ? WHERE id = ?";
+    $sql = "UPDATE categoria SET nome = ? WHERE id_categoria = ?";
     $stmt = $connect->prepare($sql);
     $stmt->bind_param("si", $nome, $id);
     $stmt->execute();
 
     echo "Categoria atualizada com sucesso!";
-}
+    header('Location:categoriass.php');
 
+}
 
 
 ?>
@@ -90,23 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" name="atualizar">Atualizar categoria</button>
                     
                 </form>
-                
+            </span>
+
                
-            </span>
-            <span class="categorias-2">
-                Social</a>
-                <img src="./imgs/editar.png" alt="" width="40px">
-                <img src="./imgs/lixeira.png" alt="" width="40px">
-
-            </span>
-            <span class="categorias-2">
-                Maquiagem</a>
-                <img src="./imgs/editar.png" alt="" width="40px">
-                <img src="./imgs/lixeira.png" alt="" width="40px">
-
-            </span>
-            <span class="categorias-2">Esportivo</a>
-                <img src="./imgs/editar.png" alt="" width="40px">
-                <img src="./imgs/lixeira.png" alt="" width="40px">
-
-            </span>
