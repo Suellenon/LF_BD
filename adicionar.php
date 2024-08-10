@@ -19,14 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     // Adiciona o carro no banco de dados
     $categoria->adicionar($nome);
-
     header('Location: categorias.php');
     exit();
 }
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

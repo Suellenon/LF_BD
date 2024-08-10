@@ -9,9 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Prepara a consulta SQL para inserir a nova categoria
         $sql = "INSERT INTO categoria (nome) VALUES (?)";
         $stmt = $connect->prepare($sql);
-        $stmt->bind_param("s", $nome);
+        $stmt->bind_param("s", $nome);                              //bind_param(): É um método do objeto de declaração preparada que vincula variáveis aos parâmetros da consulta SQL. Esse método é usado para associar valores às placeholders (marcadores) na consulta preparada.
 
-        // Executa a consulta
+  
+// "s": É uma string que define o tipo de dado do parâmetro que está sendo vinculado. No caso de "s", significa que o parâmetro é uma string. Outros possíveis tipos são:
+
+// "i" para inteiros.
+// "d" para números de ponto flutuante (double).
+// "b" para blobs (dados binários).
+
+
+
+        // Executa a consulta  
         if ($stmt->execute()) {
             echo "Categoria adicionada com sucesso!";
         } else {
@@ -26,17 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-
-
 ?>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -95,7 +94,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </form>
             </span>
         </div>
-      
-            
     </section>
 </body>

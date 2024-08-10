@@ -511,14 +511,14 @@ header h1 {
    
    
 }
- /* .editar{
+  .editar{
     display: flex;
     cursor:pointer;
     width: 25px;
     border: 1px solid var(--BRANCO);
     background-color:rgb(149, 155, 160) ;
-}  */
-/* #deletar{
+}  
+ #deletar{
     background-color:rgb(149, 155, 160);
     display: flex;
     justify-content: center;
@@ -539,7 +539,7 @@ header h1 {
     cursor: pointer;
 } */
 
-/* .adicionar a {
+.adicionar a {
    
     display: flex;
     color: var(--BRANCO);
@@ -550,7 +550,7 @@ header h1 {
     cursor: pointer;
     text-decoration: none;
 }
- */
+ 
  .adicionar {
     grid-column: 2;
     display: flex;
