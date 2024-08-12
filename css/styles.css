@@ -790,38 +790,34 @@ aside a :hover {
     font-size: 30px;
 
 }
-
+/* 
 .produtos-cadastrados input {
     border-radius: 40px;
     background-color: var(--cor-tres);
     width: 200px;
     padding: 10px;
     cursor: pointer;
-}
+} */
 
 .cadastro-produto {
     background-image: url(../imgs/rosas.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-
 }
-
-.prod-cadastrado {
-    background-color: var(--cor-tres);
-    padding: 80px;
-    height: 70%;
+.prod_cadastrado {
+ 
+   
+    height: 70%; 
     font-size: 20px;
-
-
 }
 
 .tabela_prod td {
-    border: solid var(--cor-secundaria);
-    width: 300px;
-    height: 70px;
-    padding: 20px;
-    background-color: var(--cor-primaria);
+     border: solid var(--cor-secundaria);
+     width: 300px;
+     height: 70px; 
+     padding: 10px; 
+     background-color: var(--cor-primaria); 
 }
 
 .versao-mobile {

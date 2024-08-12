@@ -5,9 +5,8 @@ require 'produto.php';
 // Cria a conexão com o banco de dados
 $conexao = (new Conexao())->conectar();
 // Cria uma instância da classe Carro
-$produto = new produto($conexao);
+$produt = new produto($conexao);
 
-$produtos = $produto->listar();
 
 
 ?>
@@ -68,23 +67,23 @@ $produtos = $produto->listar();
             <div class="form-cad">
                 <form action="adicionar_produto.php" method="post"  enctype="multipart/form-data">
                     <div >
-                        <label for="cod_prod">Cod.prod</label>
-                        <input type="number" name="cod_prod">
-                        <label for="nome_prod">Nome do produto</label>
-                        <input type="text" name="nome_prod" required>
+                        <!-- <label for="cod_prod">Cod.prod</label>
+                        <input type="number" name="cod_prod"> -->
+                        <label for="nome_do_produto">Nome do produto</label>
+                        <input type="text" name="nome_do_produto" required>
                         <label for="cor">Cor</label>
-                        <input type="text" name="cor">
+                        <input type="text" name="cor" required>
                         <label for="tamanho">Tamanho</label>
                         <input type="text" name="tamanho" required>
                         <label for="descricao">Descrição do produto</label>
-                        <input type="text" name="descricao" required>
+                        <input type="text" name="descricao_do_produto" required>
                     </div>
 
                     <div class="cad" >
-                        <label for="produto">Adicionar Produto</label>
-                        <input type="file" name="foto" id="foto">
+                        <!-- <label for="produto">Adicionar Produto</label>
+                        <input type="file" name="foto" id="foto"> -->
                         <label for="caract">Características do produto</label>
-                        <textarea name="caracteristicas" id="características"></textarea>
+                        <textarea name="caracteristicas_do_produto" id="características" required></textarea>
                     </div>
                     <input type="submit" value="Confirmar" id="enviar_formcad">
                 </form>
