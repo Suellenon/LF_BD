@@ -89,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
                 <?php endforeach; ?>
                 <span class="adicionar">
                     <a href="adicionar.php">adicionar categoria</a>
-
                 </span>
             </div>
 

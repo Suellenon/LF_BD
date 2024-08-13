@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-    // Atualiza os dados do carro no banco de dados
+    // Atualiza os dados no banco de dados
     $categoria->atualizar($id,$nome);
 
     // Redireciona para a página inicial

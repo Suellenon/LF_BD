@@ -2,20 +2,22 @@
 require 'conexoes.php';
 
 if (!isset($_GET['id'])) {
-    die("ID da categoria não fornecido.");
+    die("ID da categoria não fornecido."); //if (!isset($_GET['id'])) {: Verifica se o parâmetro id foi passado na URL via método GET. Se não estiver definido, o script termina a execução e exibe a mensagem "ID da categoria não fornecido."
+
 }
 
-$id = intval($_GET['id']);
+$id = intval($_GET['id']);  //Converte o valor do parâmetro id para um número inteiro. Isso ajuda a garantir que o valor seja tratado como um número ao interagir com o banco de dados e reduz o risco de injeção de SQL.
 
 // Obtém os detalhes da categoria
 $sql = "SELECT * FROM categoria WHERE id_categoria = ?";
 $stmt = $connect->prepare($sql);
-$stmt->bind_param("i", $id);
+$stmt->bind_param("i", $id);           //Vincula a variável $id ao marcador de posição ? na consulta SQL. O "i" indica que o parâmetro é um inteiro.
+ //Prepara a consulta SQL para execução. $connect é o objeto de conexão com o banco de dados, e prepare retorna um objeto de declaração preparada ($stmt).
 $stmt->execute();
 $result = $stmt->get_result();
-$categoria = $result->fetch_assoc();
+$categoria = $result->fetch_assoc();//$result->fetch_assoc();: Obtém a próxima linha do resultado como um array associativo. Se a categoria com o ID fornecido existir, seus detalhes serão armazenados em $categoria.
 
-if (!$categoria) {
+if (!$categoria) {                         //if (!$categoria) {: Verifica se $categoria é false ou não contém dados (significa que a categoria com o ID fornecido não foi encontrada). Se for o caso, o script termina a execução e exibe a mensagem "Categoria não encontrada."
     die("Categoria não encontrada.");
 }
 
@@ -25,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Atualiza a categoria no banco de dados
     $sql = "UPDATE categoria SET nome = ? WHERE id_categoria = ?";
     $stmt = $connect->prepare($sql);
-    $stmt->bind_param("si", $nome, $id);
+    $stmt->bind_param("si", $nome, $id);  //$stmt->bind_param("si", $nome, $id);: Vincula as variáveis $nome e $id aos marcadores de posição na consulta SQL. O "si" indica que $nome é uma string e $id é um inteiro.
     $stmt->execute();
 
-    echo "Categoria atualizada com sucesso!";
+   
     header('Location:categoriass.php');
 
 }
