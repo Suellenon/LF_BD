@@ -61,10 +61,15 @@ $produt = new produto($conexao);
     </nav>
     <main class="cad_prod">
         <section >
-            <p class="p_cad"><strong>Cadastro de Produto</strong></p>
-            <p class="p_cad"> Detalhes do Produto</p>
+           <div class="flex">
+               
+               <p class="p_cad"><strong>Cadastro de Produto</strong></p>
+               <p class="p_cad"> Detalhes do Produto</p>
+               <a href="produtos_Cadastrados.php" class="p_cad">Produtos cadastrados</a>
+           </div>
 
             <div class="form-cad">
+                
                 <form action="adicionar_produto.php" method="post"  enctype="multipart/form-data">
                     <div >
                         <!-- <label for="cod_prod">Cod.prod</label>

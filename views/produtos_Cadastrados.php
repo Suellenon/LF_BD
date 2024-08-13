@@ -108,7 +108,7 @@ $produtos = $produto->listar();
                             <td>
                                 <input type="number" name="ids[]" value="<?= $produto['id'] ?>">
                                 <a href="delete_produto.php?id=<?= ($produto['id']); ?>" onclick="return confirm('Certeza que quer excluir esse produto?');">
-                                    <button type="button" name="deletar">Excluir</button>
+                                    <button type="button" name="deletar" id="btn_deletar">Excluir</button>
                                 </a>
                             </td>
 

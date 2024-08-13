@@ -726,6 +726,10 @@ aside a :hover {
     font-size: 30px;
 
 }
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 .cad_prod {
@@ -772,6 +776,7 @@ aside a :hover {
     border-radius: 240px;
     background-color: var(--cor-primaria);
     display: flex;
+   justify-content: center;
     margin-left: auto;
     cursor: pointer;
     text-decoration: underline;
@@ -819,6 +824,11 @@ aside a :hover {
      padding: 10px; 
      background-color: var(--cor-primaria); 
 }
+.btn_deletar{
+    display: flex;
+    align-items: center;
+}
+
 
 .versao-mobile {
     display: flex;
@@ -1240,7 +1250,7 @@ aside a :hover {
         width: 200px;
     }
 
-    .radio {}
+  
 
     /*detalhes*/
     .grid_detalhe {
