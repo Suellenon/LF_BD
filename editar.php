@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <form action="" method="post">
                     <input type="text" name="nome" id="" value="<?php echo htmlspecialchars($categoria['nome']); ?>"> 
-                    <button type="submit" name="atualizar">Atualizar categoria</button>
+                    <button type="submit" name="atualizar" class="atualizar">Atualizar categoria</button>
                     
                 </form>
             </span>

@@ -539,8 +539,10 @@ header h1 {
 
 .atualizar {
     font-size: 25px;
-    color: var(--preto);
+    color: var(--BRANCO);
     cursor: pointer;
+    border: none;
+    background-color: var(--cor-primaria);
 }
 
 .adicionar a {
@@ -563,10 +565,7 @@ header h1 {
     cursor: pointer;
 }
 
-.adicionar a {
-    text-decoration: none;
-    color: var(--BRANCO);
-}
+
 
 /*Perfil*/
 

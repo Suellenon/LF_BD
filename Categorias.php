@@ -77,20 +77,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deletar'])) {
         <form action="Categorias.php" method="post">
 
             <div class="Categorias">
-                <?php foreach ($categoria as $categoria) : ?>
-                    <span class="categorias-2">
-                        <a><?= htmlspecialchars($categoria['nome']) ?></a>
-                        <a href="edit.php?id=<?= $categoria['id_categoria'] ?>"><img src="./imgs/editar.png" alt="" width="25px" class="editar"></a>
+                <?php foreach ($categoria as $conjunto) : ?>
+                    <div class="categorias-2">
+                        <a><?= htmlspecialchars($conjunto['nome']) ?></a>
+                        <a href="edit.php?id=<?= $conjunto['id_categoria'] ?>"><img src="./imgs/editar.png" alt="" width="25px" class="editar"></a>
                         <form action="delete.php" method="post" onsubmit="return confirm('Certeza que quer deletar?')">
-                            <input type="hidden" name="id" value="<?= $categoria['id_categoria'] ?>">
+                            <input type="hidden" name="id" value="<?= $conjunto['id_categoria'] ?>">
                             <button name="deletar" id="deletar"><img src="./imgs/lixeira.png" alt="" width="25px"></button>
                         </form>
-                    </span>
+                    </div>
                 <?php endforeach; ?>
-                <span class="adicionar">
+                <div class="adicionar">
                     <a href="adicionar.php">adicionar categoria</a>
-                </span>
+                </div>
             </div>
+        </form>
 
     </section>
 </body>
